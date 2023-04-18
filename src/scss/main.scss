@@ -1,0 +1,54 @@
+// Переменные
+@import "./../scss/global/variables";
+
+// Миксины
+@import "./../scss/global/mixins";
+
+// Сброс дефолтных стилей браузера (дополнительный)
+@import "./../scss/global/global";
+
+// Основные стили
+@import "./../scss/global/base";
+
+// Размеры шрифтов повторяющихся элементов (h1, заголовки секций и т.д.)
+@import "./../scss/global/typography";
+
+// Общие стили для кнопок
+@import "./../scss/global/btns";
+
+// Общие стили для инпутов, чекбоксов и т.д.
+@import "./../scss/global/inputs";
+
+// Общие стили для секций (паддинги и т.д.)
+@import "./../scss/global/sections";
+
+// Плагины
+@import "./../scss/libs/swiper-bundle.min"; // Слайдер
+
+// Хедер
+@import "./../components/sections/header/header";
+
+// Футер
+@import "./../components/sections/footer/footer";
+
+// БЭМ-блоки
+// @import "./../components/bem-blocks/accordion/accordion"; // Аккордион
+@import "./../components/bem-blocks/burger/_burger"; // Бургер
+@import "./../components/bem-blocks/logo/_logo"; // Логотип
+@import "./../components/bem-blocks/nav/_nav"; // Меню
+@import "./../components/bem-blocks/phone/_phone"; // Телефон
+@import "./../components/bem-blocks/socials/_socials"; // Соцсети
+@import "./../components/bem-blocks/breadcrumbs/_breadcrumbs";
+// @import "./../components/bem-blocks/modal/modal"; // Модалки
+
+// Секции
+@import "./../components/sections/first/_first"; // Первая секция
+@import "./../components/sections/form-questions/_form-questions"; // Форма (вопросы)
+@import "./../components/sections/form-consult/_form-consult"; // Форма (консультация)
+@import "./../components/sections/form-application/_form-application"; // Форма (заявки)
+@import "./../components/sections/staff/_staff"; // Наши сотрудники
+@import "./../components/sections/articles/_articles"; // Похожие услуги (статьи)
+@import "./../components/sections/prices/_prices"; // Цены на допуслуги
+@import "./../components/sections/faq/_faq"; // Отвечаем на вопросы
+@import "./../components/sections/licenses/_licenses"; // Сертификаты и лицензии
+@import "./../components/sections/reviews/_reviews"; // Отзывы наших клиентов

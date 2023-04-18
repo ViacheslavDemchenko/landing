@@ -1,0 +1,68 @@
+.prices {
+  padding: 4rem 0;
+
+  h2 {
+    margin-bottom: 4rem;
+    align-self: flex-start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #3C5148;
+  }
+
+  &__table {
+    width: 100%;
+
+    tr {
+
+      th {
+        text-align: center;
+        padding: 1.6rem 0;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        leading-trim: both;
+        text-edge: cap;
+        color: #777777;
+        background: #F8F9FB;
+
+        &:nth-of-type(1) {
+          width: 72.7rem;
+        }
+
+        &:nth-of-type(2) {
+          width: 32.1rem;
+        }
+      }
+
+      td {
+        padding: 1.6rem 0 1.6rem 2rem;
+        border-width: 1px 1px 1px 0px;
+        border-style: solid;
+        border-color: #EFF1F5;
+        border-radius: 0px 3px 3px 0px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        leading-trim: both;
+        text-edge: cap;
+        color: #333333;
+
+        &:nth-of-type(1) {
+          width: 72.7rem;
+        }
+
+        &:nth-of-type(2) {
+          width: 32.1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.btn {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 1.6rem 2.6rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+
+  &--green {
+    color: #FFFFFF;
+    background: #8FB1B0;
+  }
+
+  &--transparent {
+    color: #719392;
+    border: 0.1rem solid rgba(113, 147, 146, 0.35);
+    background: transparent;
+  }
+
+  &--white {
+    padding: 1.6rem 6.4rem;
+    color: #3C5148;
+    background: #FFFFFF;
+  }
+}

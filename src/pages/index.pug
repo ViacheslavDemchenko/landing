@@ -1,0 +1,20 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Landing';
+
+block content
+    .wrap-feedback
+    .wrapper
+        include ./../components/sections/header/header.pug
+        include ./../components/sections/first/first.pug
+        include ./../components/sections/form-questions/form-questions.pug
+        include ./../components/sections/prices/prices.pug
+        include ./../components/sections/licenses/licenses.pug
+        include ./../components/sections/reviews/reviews.pug
+        include ./../components/sections/staff/staff.pug
+        include ./../components/sections/form-application/form-application.pug
+        include ./../components/sections/faq/faq.pug
+        include ./../components/sections/form-consult/form-consult.pug
+        include ./../components/sections/articles/articles.pug
+        include ./../components/sections/footer/footer.pug
