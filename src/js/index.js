@@ -5,7 +5,7 @@ import accordion from './modules/accordion.js'; // Аккордион
 // import mobileMenu from './modules/mobileMenu'; // Мобильное меню
 // import modal from './modules/modal'; // Модалки
 import licenses from './modules/licenses'; // Слайдер лицензий
-import reviews from './modules/licenses'; // Слайдер отзывов
+import reviews from './modules/reviews'; // Слайдер отзывов
 
 accordion();
 // mobileMenu();

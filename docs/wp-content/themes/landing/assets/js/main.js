@@ -352,6 +352,7 @@ if (window && window.NodeList && !NodeList.prototype.forEach) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/accordion.js */ "./src/js/modules/accordion.js");
 /* harmony import */ var _modules_licenses__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/licenses */ "./src/js/modules/licenses.js");
+/* harmony import */ var _modules_reviews__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/reviews */ "./src/js/modules/reviews.js");
 __webpack_require__(/*! polyfill-nodelist-foreach */ "./node_modules/polyfill-nodelist-foreach/index.js"); // Полифил для поддержки метода forEach в IE11+ и Safari9
 __webpack_require__(/*! svgxuse */ "./node_modules/svgxuse/svgxuse.js"); // Полифил для поддержки IE11+ и старыми браузерами использования SVG через use 
 
@@ -365,7 +366,7 @@ Object(_modules_accordion_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 // mobileMenu();
 // modal();
 Object(_modules_licenses__WEBPACK_IMPORTED_MODULE_1__["default"])();
-Object(_modules_licenses__WEBPACK_IMPORTED_MODULE_1__["default"])();
+Object(_modules_reviews__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 /***/ }),
 
@@ -4755,6 +4756,60 @@ function licenses() {
           spaceBetween: 20,
           loopedSlides: 1,
           slidesPerView: 4
+        }
+      }
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/reviews.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/reviews.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return reviews; });
+/* harmony import */ var _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../libs/swiper-bundle.min.js */ "./src/js/libs/swiper-bundle.min.js");
+/* harmony import */ var _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0__);
+ // Слайдер
+
+function reviews() {
+  if (document.querySelector('.reviews__slider')) {
+    var swiper = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.reviews__slider', {
+      spaceBetween: 20,
+      loopedSlides: 1,
+      slidesPerView: 3,
+      autoHeight: true,
+      navigation: {
+        nextEl: '.swiper-button-next-reviews',
+        prevEl: '.swiper-button-prev-reviews'
+      },
+      breakpoints: {
+        // 320: {
+        //   spaceBetween: 0,
+        //   loopedSlides: 1,
+        //   slidesPerView: 1,
+        //   autoHeight: true
+        // },
+        // 700: {
+        //   spaceBetween: 20,
+        //   loopedSlides: 1,
+        //   slidesPerView: 2
+        // },
+        // 1024: {
+        //   spaceBetween: 30,
+        //   loopedSlides: 1,
+        //   slidesPerView: 3
+        // },
+        1440: {
+          spaceBetween: 20,
+          loopedSlides: 1,
+          slidesPerView: 3
         }
       }
     });

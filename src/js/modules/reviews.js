@@ -5,7 +5,7 @@ export default function reviews() {
     const swiper = new Swiper('.reviews__slider', {
       spaceBetween: 20,
       loopedSlides: 1,
-      slidesPerView: 4,
+      slidesPerView: 3,
       autoHeight: true,
       navigation: {
         nextEl: '.swiper-button-next-reviews',
@@ -31,7 +31,7 @@ export default function reviews() {
         1440: {
           spaceBetween: 20,
           loopedSlides: 1,
-          slidesPerView: 4
+          slidesPerView: 3
         },
       }
     });
