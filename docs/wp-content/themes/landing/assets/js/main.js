@@ -351,22 +351,23 @@ if (window && window.NodeList && !NodeList.prototype.forEach) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/accordion.js */ "./src/js/modules/accordion.js");
-/* harmony import */ var _modules_licenses__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/licenses */ "./src/js/modules/licenses.js");
-/* harmony import */ var _modules_reviews__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/reviews */ "./src/js/modules/reviews.js");
+/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobileMenu */ "./src/js/modules/mobileMenu.js");
+/* harmony import */ var _modules_licenses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/licenses */ "./src/js/modules/licenses.js");
+/* harmony import */ var _modules_reviews__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/reviews */ "./src/js/modules/reviews.js");
 __webpack_require__(/*! polyfill-nodelist-foreach */ "./node_modules/polyfill-nodelist-foreach/index.js"); // Полифил для поддержки метода forEach в IE11+ и Safari9
 __webpack_require__(/*! svgxuse */ "./node_modules/svgxuse/svgxuse.js"); // Полифил для поддержки IE11+ и старыми браузерами использования SVG через use 
 
  // Аккордион
-// import mobileMenu from './modules/mobileMenu'; // Мобильное меню
+ // Мобильное меню
 // import modal from './modules/modal'; // Модалки
  // Слайдер лицензий
  // Слайдер отзывов
 
 Object(_modules_accordion_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-// mobileMenu();
+Object(_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 // modal();
-Object(_modules_licenses__WEBPACK_IMPORTED_MODULE_1__["default"])();
-Object(_modules_reviews__WEBPACK_IMPORTED_MODULE_2__["default"])();
+Object(_modules_licenses__WEBPACK_IMPORTED_MODULE_2__["default"])();
+Object(_modules_reviews__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 /***/ }),
 
@@ -4760,6 +4761,46 @@ function licenses() {
       }
     });
   }
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/mobileMenu.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/mobileMenu.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mobileMenu; });
+function mobileMenu() {
+  window.addEventListener('resize', function () {
+    if (window.innerWidth <= 1200) {
+      var _burgerButton = document.querySelector('.cmn-toggle-switch__htx');
+      var _mobileMenu = document.querySelector('.header__mobile-wrap');
+      var _html = document.documentElement;
+      var navLinks = document.querySelectorAll('.header nav ul li a');
+      _burgerButton.addEventListener('click', function () {
+        _mobileMenu.classList.toggle('header__mobile-wrap--active');
+        _burgerButton.classList.toggle('active');
+        _html.classList.toggle('no-scroll');
+      });
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          _mobileMenu.classList.remove('header__mobile-wrap--active');
+          _burgerButton.classList.remove('active');
+          _html.classList.remove('no-scroll');
+        });
+      });
+    }
+    if (window.innerWidth >= 1200) {
+      mobileMenu.classList.remove('header__mobile-wrap--active');
+      burgerButton.classList.remove('active');
+      html.classList.remove('no-scroll');
+    }
+  });
 }
 
 /***/ }),

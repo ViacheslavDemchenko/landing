@@ -1,9 +1,8 @@
 .cmn-toggle-switch {
-    // position: absolute;
-    // z-index: 8000;
-    // top: -0.7rem;
-    // right: 0rem;
-    // transform: translateX(.5rem);
+    position: absolute;
+    z-index: 9500;
+    left: 1rem;
+    top: 1rem;
     display: block;
     margin: 0;
     padding: 0;
@@ -15,6 +14,11 @@
     border: none;
     cursor: pointer;
     transition: background .3s ease-out;
+
+    @media (min-width: 1200px) {
+      position: static;
+      z-index: 0;
+    }
   
     // @media (min-width: 1024px) {  
     //   display: none;
@@ -88,24 +92,25 @@
     height: 4.7rem;
 
     span {
-        background: none;
-        width: 3rem;
-        right: .5rem;
-  
-        &::before,
-        &::after {
-            background: #333333;
-            transition-delay: .3s;
-        }
-  
-        &::before {
-            top: 0;
-            transform: rotate(45deg);
-        }
-  
-        &::after {
-            bottom: 0;
-            transform: rotate(-45deg);
-        }
+      background: none;
+      width: 3rem;
+      right: .5rem;
+
+      &::before,
+      &::after {
+        background: #333333;
+        transition-delay: .3s;
+      }
+
+      &::before {
+        width: 100%;
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
     }
 }

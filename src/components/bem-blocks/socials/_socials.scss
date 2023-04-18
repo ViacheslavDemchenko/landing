@@ -1,5 +1,9 @@
 .socials {
-  margin-left: 2rem;
+  // margin-left: 2rem;
+
+  @media (min-width: 1048px) {
+    margin-left: 2rem;
+  }
 
   &__list {
     display: flex;
